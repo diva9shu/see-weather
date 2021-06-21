@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "see-weat"
+  },
+  "targets": {
+    "see-weat": {
+      "hosting": {
+        "second-site": [
+          "see-weather-10"
+        ]
+      }
+    }
+  }
+}

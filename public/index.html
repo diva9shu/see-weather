@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See Weather</title>
+    <link rel="stylesheet" href="res/css/bootstrap.min.css">
+    <link rel='icon' href='res/icons/cloudy.svg'>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-dark bg-dark">
+      <div class="container-fluid">
+        <span class="navbar-brand mx-auto mb-0 h1"><img id='nav-icon' src='res/icons/cloudy.svg'>See-Weather</span>
+      </div>
+    </nav>
+
+    <!-- Toast -->
+    <div style='position:relative'>
+      <div class="toast align-items-center" style='position:absolute; top:0; right:0;' role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">
+          City Not Found! Showing Default - Delhi.
+        </div>
+          <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+        <!-- container -->
+    <div class="container">
+      <div class="input">
+        <input
+            type="text"
+            id="input-city"
+            name="input-city"
+            placeholder="enter city name"
+        />
+        <span id='input-or'>Or</span>
+        <input
+            id="show-current"
+            class="btn btn-primary"
+            type="button"
+            value="Current Location"
+        />
+      </div>
+      <div class="weather" style='display: none'>
+        <div class="city-info">
+            <ul></ul>
+        </div>
+        <div class="current-weather">
+            <ul></ul>
+        </div>
+        <div class='current-hourly' id='current-hourly' >
+        </div>
+        <div class="current-details">
+        </div>
+        <div class="daily-weather">
+          <ul style='list-style-type: none; padding-left: 0'>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <script
+      src="res/js/bootstrap.bundle.min.js"
+    ></script>
+    <script src="res/js/jquery.min.js"></script>
+    <script type='text/javascript' src="res/js/anychart-base.min.js"></script>
+    <script src="res/js/dark_blue.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
